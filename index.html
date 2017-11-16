@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+
+
+		<textarea id="text"></textarea>
+		<button onClick="readyText()"> Ler </button>
+		<button onClick="stopReady()">Parar</button>
+
+
+		
+		<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+		<script>
+			
+			function readyText() {
+				var text = document.getElementById("text").value;
+				responsiveVoice.speak( text , "Brazilian Portuguese Female");
+			}
+
+			function stopReady(){
+				responsiveVoice.cancel();
+			}
+
+		</script>
+
+	</body>
+</html>
